@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.facebook.testing.screenshot'
 
 android {
     compileSdkVersion 26
@@ -12,7 +13,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.jolandaverhoef.livingdesignsystem.CoolblueTestRunner"
     }
     buildTypes {
         release {
