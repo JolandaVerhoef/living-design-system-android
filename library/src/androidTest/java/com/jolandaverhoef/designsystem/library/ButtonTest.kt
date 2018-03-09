@@ -28,6 +28,7 @@ class ButtonTest {
         }
     }
 
+    @Test
     fun testUnactiveButton_RendersCorrectly() {
         viewTestRule.runOnMainSynchronously {
             it.render(active = false)
@@ -40,7 +41,7 @@ class ButtonTest {
         }
     }
 
-    class ButtonScreen(): Screen<ButtonScreen>() {
+    class ButtonScreen : Screen<ButtonScreen>() {
         val image = KImageView { withId(R.id.button_image) }
     }
 }

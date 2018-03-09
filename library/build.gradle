@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.facebook.testing.screenshot'
 
 android {
     compileSdkVersion 27
@@ -13,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.jolandaverhoef.designsystem.library.CoolblueTestRunner"
 
     }
 
@@ -37,7 +38,7 @@ dependencies {
     debugImplementation 'com.novoda:espresso-support-extras:0.2.1'
     androidTestImplementation 'com.novoda:espresso-support:0.2.1'
     androidTestImplementation 'com.agoda.kakao:kakao:1.2.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
     mavenCentral()
